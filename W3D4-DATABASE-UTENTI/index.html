@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database di utenti</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+
+    body{
+        background-image: url("sfondo.jpg");
+    }
+
+    h1{
+        font-size: 55px;
+    }
+
+    .title{
+        color: white;
+        width: 800px;
+        margin: auto;
+    }
+
+    .form-label{
+        color: white;
+        font-size: 18px;
+    }
+
+</style>
+<body>
+    <div class="container mt-5">
+        <!-- TITOLO -->
+        <div class="text-center title">
+        <h1 class="mb-4">DATABASE UTENTI</h1>
+        </div>
+
+        <!-- DROPDOWN CON SELEZIONE-->
+        <div class="mb-3">
+            <label for="filterOption" class="form-label">Filtra per:</label>
+            <select id="filterOption" class="form-select">
+                <option value="name">Nome</option>
+                <option value="username">Username</option>
+                <option value="email">Email</option>
+            </select>
+        </div>
+
+            <!-- INPUT TEXT PER RICERCA -->
+        <div class="mb-3">
+            <label for="filterInput" class="form-label">Cerca:</label>
+            <input type="text" id="filterInput" class="form-control" placeholder="Digita per cercare...">
+        </div>
+
+        <!-- TABELLA -->
+        <table class="table table-bordered">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>Nome</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Sito web</th>
+                </tr>
+            </thead>
+
+            <!-- INSERISCO I DATI CERCATI CON ID USERTABLE NELLA TABELLA -->
+            <tbody id="userTable"></tbody>
+
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
